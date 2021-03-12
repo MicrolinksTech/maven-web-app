@@ -1,6 +1,6 @@
 node 
 {
-def mavenHome = tool name: 'maven3.6.2'
+def mavenHome = tool name: 'maven3.6.3'
 stage('1. CodeClone') 
 {
 git credentialsId: 'https://github.com/microlinks-tech/maven-web-app.git'
