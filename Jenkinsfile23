@@ -3,7 +3,7 @@ node
 def mavenHome = tool name: 'maven3.6.2'
 stage('1. CodeClone') 
 {
-git credentialsId: 'Github_credentials', url: 'https://github.com/myLandmakTechnology/maven-web-app.git'
+git credentialsId: 'https://github.com/microlinks-tech/maven-web-app.git'
 }
 stage('2. Build')
 {
@@ -23,7 +23,7 @@ echo "Approved. Ready for deployment"
 }
 stage('6. DeployTomcat') 
 {
-deploy adapters: [tomcat9(credentialsId: 'Tomcat-Credentials', path: '', url: 'http://54.163.156.108:8888/')], contextPath: null, war: 'target/*war'
+deploy adapters: [tomcat9(credentialsId: 'deploy adapters: [tomcat9(credentialsId: 'tomcat_credentials', path: '', url: 'http://3.19.54.129:8888')], contextPath: null, war: 'target/*war''
 }
 stage('7. Notification') 
 {
