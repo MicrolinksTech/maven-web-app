@@ -7,7 +7,7 @@ def mavenHome = tool name: "maven3.6.3"
        git credentialsId: 'GitCredentials', url: 'https://github.com/myLandmakTechnology/maven-web-app'
     }
     
-    stage("2. Build")
+    stage("2. maven Build")
     {
         sh "${mavenHome}/bin/mvn clean package"
 
