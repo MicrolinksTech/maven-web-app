@@ -9,7 +9,7 @@ def mavenHome = tool name: "maven3.6.3"
     
     stage("2. maven Build")
     {
-        sh "${mavenHome}/bin/mvn clean package"
+        sh "${mavenHome}/bin/mvn package"
 
         // bat mvn clean package  - for winows OS
     }
